@@ -340,13 +340,7 @@ function AdminPanel({ onExit }) {
               {createStep!=null ? "Create Training" : assignTo ? "Assign Training" : detail ? detail.title.substring(0,28)+"..." : nav.charAt(0).toUpperCase()+nav.slice(1)}
             </span>
           </div>
-          {nav==="trainings" && !createStep && !detail && !assignTo && (
-            <div style={{ display:"flex", gap:8 }}>
-              <Btn size="sm">All Positions</Btn>
-              <Btn size="sm" variant="ghost">All Candidates</Btn>
-              <Btn size="sm" onClick={()=>setCS(1)}>+ Add Training</Btn>
-            </div>
-          )}
+
         </div>
 
         <main style={{ flex:1, padding:24, overflowY:"auto", background:"#f0f2f5" }}>
